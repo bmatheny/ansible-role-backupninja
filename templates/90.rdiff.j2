@@ -23,7 +23,9 @@ exclude = {{path}}
 {% endfor %}
 
 [dest]
-type = {{backupninja_rdiff_desttype|default('remote')}}
+type = {{backupninja_rdiff_desttype}}
 directory = {{backupninja_rdiff_directory | mandatory}}
-host = {{backupninja_rdiff_host}}
-user = {{backupninja_rdiff_user}}
+{% if backupninja_rdiff_desttype == "remote" %}
+host = {{backupninja_rdiff_host | mandatory}}
+user = {{backupninja_rdiff_user | mandatory}}
+{% endif %}

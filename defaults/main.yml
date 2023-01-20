@@ -37,6 +37,9 @@ backupninja_pgsql_databases:    "all"
 backupninja_pgsql_compress:     "yes"
 backupninja_pgsql_format:       "plain"
 
+# rdiff backup options
+backupninja_rdiff_desttype:     "remote"
+
 # Overrule or append to these for the base configuration
 backupninja_global_include_paths:
     - "/var/spool/cron/crontabs"
