@@ -63,8 +63,8 @@
     create: "yes"
     block: |
       host backup
-        HostName {{backup_domain|mandatory}}
-        User {{backup_name|mandatory}}
+        HostName {{backup_domain}}
+        User {{backup_name}}
         AddressFamily inet
   when:
     - enable_backups|bool
