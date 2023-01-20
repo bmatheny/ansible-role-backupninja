@@ -78,3 +78,4 @@ backupninja_default_jobs:
 backupninja_hotpatch_paramiko: false
 
 enable_backups: true
+enable_remote_backups: true

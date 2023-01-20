@@ -63,11 +63,12 @@
     create: "yes"
     block: |
       host backup
-        HostName {{backup_domain}}
-        User {{backup_name}}
+        HostName {{backup_domain|mandatory}}
+        User {{backup_name|mandatory}}
         AddressFamily inet
   when:
     - enable_backups|bool
+    - enable_remote_backups|bool
   tags:
     - ssh-config
 
