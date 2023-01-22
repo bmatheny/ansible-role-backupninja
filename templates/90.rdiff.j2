@@ -1,5 +1,7 @@
 # {{ ansible_managed }}
 
+options = {{ backupninja_rdiff_options | default(omit) }}
+
 [source]
 type = local
 keep = {{backupninja_keep}}
