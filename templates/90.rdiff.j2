@@ -1,6 +1,6 @@
 # {{ ansible_managed }}
 
-options = {{ backupninja_rdiff_options | default(omit) }}
+options = {{ backupninja_rdiff_options | default("") }}
 
 [source]
 type = local
